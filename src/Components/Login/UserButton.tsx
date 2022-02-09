@@ -1,4 +1,8 @@
-function UserButton(props) {
+type Props = {
+    setModal: React.Dispatch<React.SetStateAction<string>>
+}
+
+function UserButton(props:Props) {
 
     const {setModal} = props
 

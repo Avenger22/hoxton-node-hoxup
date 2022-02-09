@@ -1,6 +1,14 @@
-import User from '../Components/Login/User'
+import LoginUser from '../Components/Login/LoginUser'
 import UserButton from '../Components/Login/UserButton'
-import {PropsNew} from '../types/types'
+import {User} from '../types/types'
+
+type PropsNew = {
+
+    users: User[]
+    logIn: Function
+    setModal: React.Dispatch<React.SetStateAction<string>>
+
+}
 
 function Login(props:PropsNew) {
 
@@ -21,7 +29,7 @@ function Login(props:PropsNew) {
 
                         {users.map(user => 
 
-                                <User 
+                                <LoginUser 
                                     key = {user.id}
                                     user = {user}
                                     logIn = {logIn}

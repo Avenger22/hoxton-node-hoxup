@@ -1,4 +1,11 @@
-function Login(props) {
+import {User} from "../../types/types"
+
+type PropsLogin = {
+    user: User
+    logIn: Function
+}
+
+function LoginUser(props:PropsLogin) {
 
     const {user, logIn} = props
     
@@ -32,4 +39,4 @@ function Login(props) {
 
 }
 
-export default Login
+export default LoginUser

@@ -3,8 +3,19 @@ import SideChatList from '../Components/Main/SideChatList'
 import MainMessagesList from '../Components/Main/MainMessagesList'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import {Conversation, User, Props} from '../types/types'
+import {Conversation, User, Message} from '../types/types'
 // #endregion
+
+type Props = {
+    users: User[]
+    messages: Message[]
+    conversations: Conversation[]
+    setConversations: React.Dispatch<React.SetStateAction<Conversation[]>>
+    modal: string
+    setModal: React.Dispatch<React.SetStateAction<string>>
+    currentUser: User | null
+    logOut: Function
+}
 
 function MainMenu(
     {
